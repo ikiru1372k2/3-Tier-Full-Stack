@@ -1,12 +1,12 @@
-name: Stage 1 - Basics Workflow 
+name: Stage 1 - Basics Workflow
 
 on:
-workflow_dispatch 
+  workflow_dispatch:
 
 jobs:
   hello:
-    runs-on runner-1
+    runs-on: runner-1
 
     steps:
-      - name : say hello
-        run : echo "hello from github actions "
+      - name: Say Hello
+        run: echo "Hello from GitHub Actions!"
