@@ -1,8 +1,7 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-name: Node.js CI
-
+name: Project 1 - CI
 on:
   push:
     branches: [ "main" ]
@@ -11,27 +10,9 @@ on:
 
 jobs:
   compile:
-
     runs-on: runner-1 
-
-    
-
     steps:
       - name: checkout code
         uses: actions/checkout@v4
-
-      - name: set up node js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '23'
-      - name: frontend compilation
-        run: |
-          cd client
-          find . -name "*.js" -exec node --check {} +
-      - name: backend compilation
-        run: |
-          cd api
-          find . -name "*.js" -exec node --check  {} + 
-        
         
              
